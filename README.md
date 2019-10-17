@@ -1,0 +1,2 @@
+# SkyWars
+SkyWars plugin
