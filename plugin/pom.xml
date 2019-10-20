@@ -9,6 +9,7 @@
     </parent>
     <artifactId>SkyWars</artifactId>
     <version>${skywars.version}</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!-- PROVIDED -->
@@ -119,6 +120,11 @@
                                     <pattern>org.screamingsandals.lib</pattern>
                                     <shadedPattern>${project.groupId}.lib</shadedPattern>
                                 </relocation>
+                                <!-- CORE Relocation -->
+                                <!-- <relocation>
+                                    <pattern>org.screamingsandals.screamingcore</pattern>
+                                    <shadedPattern>${project.groupId}.screamingcore</shadedPattern>
+                                </relocation>-->
                             </relocations>
                         </configuration>
                     </execution>

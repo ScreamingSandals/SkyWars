@@ -1,13 +1,11 @@
 package org.screamingsandals.skywars.api.game;
 
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.scoreboard.Scoreboard;
 import org.screamingsandals.screamingcore.game.GameState;
 import org.screamingsandals.screamingcore.game.GameTasker;
 import org.screamingsandals.screamingcore.player.GamePlayer;
 import org.screamingsandals.screamingcore.team.Team;
 
-import java.io.File;
 import java.util.List;
 
 /**
