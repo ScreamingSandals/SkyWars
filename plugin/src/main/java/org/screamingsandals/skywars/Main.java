@@ -21,10 +21,20 @@ public class Main extends JavaPlugin {
     private ScreamingCore screamingCore;
     private GamePlayerManagement gamePlayerManagement;
 
+    private boolean isPaper;
+
     @Override
     public void onEnable() {
         main = this;
         screamingCore = new ScreamingCore(this);
+
+        try {
+            Class.forName("com.destroytokyo.paper.Title");
+            isPaper = true;
+        } catch (Throwable tr) {
+            isPaper = false;
+        }
+
         gamePlayerManagement = screamingCore.getGamePlayerManagement();
 
         File gameFile = new File(ScreamingCore.getPlugin().getDataFolder().toString(), "games");
@@ -38,6 +48,10 @@ public class Main extends JavaPlugin {
 
     public static Main getMain() {
         return main;
+    }
+
+    public boolean isPaper() {
+        return isPaper;
     }
 
     public ScreamingCore getScreamingCore() {
