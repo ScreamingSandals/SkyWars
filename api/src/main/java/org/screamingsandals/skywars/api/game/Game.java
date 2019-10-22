@@ -60,10 +60,6 @@ public interface Game {
 
     List<GamePlayer> getGamePlayers();
 
-    void addGamePlayer(GamePlayer gamePlayer);
-
-    void removeGamePlayer(GamePlayer gamePlayer);
-
     boolean isPlayerInGame(GamePlayer gamePlayer);
 
     List<Team> getGameTeams();

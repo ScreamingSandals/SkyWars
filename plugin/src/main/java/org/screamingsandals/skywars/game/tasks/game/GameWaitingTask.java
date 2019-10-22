@@ -22,29 +22,31 @@ public class GameWaitingTask extends BaseTask {
 
         game = (Game) getGameTasker().getGame();
         lobbyTime = game.getLobbyTime();
-        countdown = lobbyTime;
+        resetCountdown();
     }
 
     @Override
     public void run() {
-        if (lobbyTime == 0 && isEnoughPlayers()) {
+        if (countdown == 0 && game.isEnoughPlayersInGame()) {
             game.setGameState(GameState.RUNNING);
 
             GamePreStartEvent gamePreStartEvent = new GamePreStartEvent(game);
             ScreamingCore.getPlugin().getServer().getPluginManager().callEvent(gamePreStartEvent);
             this.cancel();
+            return;
         }
 
-        if (isEnoughPlayers()) {
+        if (game.isEnoughPlayersInGame()) {
             countdown--;
         }
 
         if (game.getGamePlayers().isEmpty()) {
-            countdown = lobbyTime;
+            resetCountdown();
         }
     }
 
-    private boolean isEnoughPlayers() {
-        return game.getGamePlayers().size() >= game.getMinimalPlayers(); //TODO: use screaming core
+    private void resetCountdown() {
+        countdown = lobbyTime;
     }
+
 }

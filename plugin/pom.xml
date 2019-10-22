@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.screamingsandals</groupId>
             <artifactId>ScreamingCore</artifactId>
-            <version>0.0.3-SNAPSHOT5</version>
+            <version>0.0.3-SNAPSHOT6</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
