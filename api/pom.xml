@@ -18,11 +18,5 @@
             <version>1.14.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.screamingsandals</groupId>
-            <artifactId>ScreamingCore</artifactId>
-            <version>0.0.3-SNAPSHOT4</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 </project>

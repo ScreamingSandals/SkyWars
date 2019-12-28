@@ -3,9 +3,9 @@ package org.screamingsandals.skywars.game.listeners;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.screamingsandals.screamingcore.events.player.GamePlayerDiedEvent;
+import org.screamingsandals.screamingcore.game.Game;
 import org.screamingsandals.screamingcore.game.GameTasker;
 import org.screamingsandals.screamingcore.player.GamePlayer;
-import org.screamingsandals.skywars.game.Game;
 
 /**
  * @author ScreamingSandals team

@@ -5,9 +5,9 @@ import org.screamingsandals.screamingcore.game.Game;
 /**
  * @author ScreamingSandals team
  */
-public class Team extends org.screamingsandals.screamingcore.team.Team {
+public class SkyWarsTeam extends org.screamingsandals.screamingcore.team.Team {
 
-    public Team(Game game) {
+    public SkyWarsTeam(Game game) {
         super(game);
     }
 }

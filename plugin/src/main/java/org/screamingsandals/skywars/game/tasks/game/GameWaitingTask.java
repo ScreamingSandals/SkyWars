@@ -1,11 +1,11 @@
 package org.screamingsandals.skywars.game.tasks.game;
 
-import org.screamingsandals.screamingcore.ScreamingCore;
 import org.screamingsandals.screamingcore.events.game.GamePreStartEvent;
+import org.screamingsandals.screamingcore.game.Game;
 import org.screamingsandals.screamingcore.game.GameState;
 import org.screamingsandals.screamingcore.game.GameTasker;
 import org.screamingsandals.screamingcore.game.tasks.BaseTask;
-import org.screamingsandals.skywars.game.Game;
+import org.screamingsandals.skywars.Main;
 
 /**
  * @author ScreamingSandals team
@@ -31,7 +31,7 @@ public class GameWaitingTask extends BaseTask {
             game.setGameState(GameState.RUNNING);
 
             GamePreStartEvent gamePreStartEvent = new GamePreStartEvent(game);
-            ScreamingCore.getPlugin().getServer().getPluginManager().callEvent(gamePreStartEvent);
+            Main.getMain().getCore().call(gamePreStartEvent);
             this.cancel();
             return;
         }
